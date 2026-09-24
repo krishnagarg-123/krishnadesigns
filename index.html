@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Krishna Design</title>
+
+    <style>
+        html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fa;
+    color: #222;
+}
+
+.navbar {
+    background: linear-gradient(90deg, #0b79e5, #168bf5);
+    padding: 16px 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+        position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-box {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.logo-icon {
+    width: 58px;
+    height: 58px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-weight: 900;
+}
+
+/* K */
+.logo-icon span:first-child {
+    position: absolute;
+    font-size: 42px;
+    left: 6px;
+    top: 5px;
+    z-index: 2;
+}
+
+/* D */
+.logo-icon span:last-child {
+    position: absolute;
+    font-size: 42px;
+    left: 23px;
+    top: 5px;
+    z-index: 1;
+}
+
+/* Premium orbit */
+.logo-icon::before {
+    content: "";
+    position: absolute;
+    width: 54px;
+    height: 25px;
+    border: 2px solid white;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-radius: 50%;
+    transform: rotate(-25deg);
+}
+
+/* Small premium line */
+.logo-icon::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background: white;
+    bottom: 2px;
+    left: 14px;
+    border-radius: 10px;
+}
+.logo-text h2 {
+    margin: 0;
+    color: white;
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.logo-text span {
+    color: white;
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 35px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.nav-links a:hover {
+    border-bottom: 2px solid white;
+    padding-bottom: 5px;
+}
+.hero {
+    padding: 90px 60px;
+    background: linear-gradient(135deg, #ffffff, #eef6ff);
+}
+
+.hero-content {
+    max-width: 1150px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero h1 {
+    font-size: 52px;
+    margin-bottom: 15px;
+    color: #111827;
+}
+
+.hero h1 span {
+    color: #168bf5;
+    font-style: italic;
+}
+
+.hero p {
+    font-size: 20px;
+    line-height: 1.5;
+    color: #64748b;
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+.hero-btn {
+    display: inline-block;
+    background-color: #168bf5;
+    color: white;
+    padding: 15px 28px;
+    border-radius: 7px;
+    box-shadow: 0 8px 20px rgba(22,139,245,0.25);
+    transition: 0.3s ease;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero-btn:hover {
+    background-color: #0b70d1;
+    transform: translateY(-3px);
+}
+
+.hero-features {
+    display: flex;
+    gap: 35px;
+    margin-top: 35px;
+}
+
+.hero-features div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    transition: 0.3s ease;
+    cursor: default;
+}
+.hero-features div:hover {
+    transform: translateY(-3px);
+}
+
+.hero-features strong {
+    color: #1e293b;
+}
+
+.hero-features small {
+    color: #64748b;
+}
+
+.hero-image {
+    flex: 1;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.plant {
+    position: absolute;
+    left: 5px;
+    bottom: 20px;
+    z-index: 3;
+    text-align: center;
+}
+
+.plant-leaves {
+    width: 80px;
+    height: 75px;
+    margin: auto;
+    position: relative;
+}
+
+.plant-leaves i {
+    position: absolute;
+    width: 22px;
+    height: 65px;
+    background: #4caf50;
+    border-radius: 100% 0 100% 0;
+    bottom: 5;
+    left: 15spx;
+    transform-origin: bottom;
+}
+
+.plant-leaves i:nth-child(1) { transform: rotate(-45deg); }
+.plant-leaves i:nth-child(2) { transform: rotate(-25deg); }
+.plant-leaves i:nth-child(3) { transform: rotate(0deg); }
+.plant-leaves i:nth-child(4) { transform: rotate(25deg); }
+.plant-leaves i:nth-child(5) { transform: rotate(45deg); }
+
+.plant-pot {
+    width: 75px;
+    height: 65px;
+    background: #f4f4f4;
+    border-radius: 5px 5px 18px 18px;
+    color: #555;
+    font-size: 9px;
+    font-weight: bold;
+    line-height: 13px;
+    padding-top: 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+}
+
+
+.laptop {
+    position: relative;
+    z-index: 2;
+    width: 360px;
+}
+
+.laptop-screen {
+    width: 340px;
+    height: 200px;
+    background-color: #111827;
+    border: 10px solid #1f2937;
+    border-radius: 12px 12px 5px 5px;
+    box-shadow: inset 0 0 25px rgba(22,139,245,0.15);
+    transition: 0.3s ease;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.laptop-screen span:nth-child(3) {
+    color: #168bf5;
+    text-decoration: underline;
+}
+
+.laptop-base {
+    width: 390px;
+    height: 18px;
+    background-color: #9ca3af;
+    border-radius: 0 0 20px 20px;
+    margin-left: -15px;
+}
+.coffee-mug {
+    position: absolute;
+    right: 15px;
+    bottom: 5px;
+    width: 80px;
+    height: 80px;
+    background: #111827;
+    border-radius: 8px 8px 15px 15px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+    z-index: 3;
+}
+
+.coffee-mug::before {
+    content: "KD";
+    position: absolute;
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    left: 21px;
+    top: 24px;
+}
+
+.coffee-mug::after {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 22px;
+    border: 4px solid #111827;
+    border-left: none;
+    border-radius: 0 15px 15px 0;
+    right: -18px;
+    top: 12px;
+}
+.hero-circle {
+    width: 300px;
+    height: 300px;
+    background-color: #dbeafe;
+    border-radius: 50%;
+    position: absolute;
+}
+
+button {
+    background-color: #168bf5;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0b70d1;
+}
+.about {
+    padding: 45px 60px;
+    background-color: white;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+    color: #111827;
+}
+
+.about p {
+    font-size: 17px;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: auto;
+    color: #64748b;
+    background: #dbeafe;
+    padding: 25px 35px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+.services {
+    padding: 70px 60px;
+    background-color: #f5f7fa;
+}
+
+.services h2 {
+    text-align: center;
+    font-size: 36px;
+    color: #168bf5;
+    margin-bottom: 40px;
+}
+
+.service-container {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    background-color: white;
+    padding: 35px 25px;
+    width: 280px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+}
+
+.service-card h3 {
+    color: #168bf5;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    line-height: 1.6;
+    color: #64748b;
+}
+.portfolio {
+    padding: 70px 60px;
+    background-color: white;
+    text-align: center;
+}
+
+.portfolio h2 {
+    font-size: 36px;
+    color: #111827;
+    margin-bottom: 10px;
+}
+
+.portfolio-subtitle {
+    font-size: 17px;
+    color: #64748b;
+    margin-bottom: 40px;
+}
+
+.portfolio-container {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.portfolio-card {
+    background-color: #f8fafc;
+    width: 280px;
+    padding: 30px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.portfolio-icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.portfolio-card h3 {
+    color: #168bf5;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.portfolio-card p {
+    color: #64748b;
+    line-height: 1.6;
+}
+.portfolio-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #168bf5;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.portfolio-btn:hover {
+    background-color: #0b70d1;
+}
+.portfolio-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+}
+.contact {
+    padding: 80px 25px;
+    text-align: center;
+    background: linear-gradient(135deg, #f8fafc, #eef6ff);
+}
+
+.contact h2 {
+    font-size: 40px;
+    color: #111827;
+    margin-bottom: 15px;
+}
+
+.contact p {
+    font-size: 17px;
+    color: #64748b;
+    margin-bottom: 25px;
+}
+
+.contact h2 {
+    font-size: 36px;
+    color: #111827;
+    margin-bottom: 15px;
+}
+
+.contact p {
+    font-size: 17px;
+    color: #64748b;
+    margin-bottom: 25px;
+}
+footer {
+    background-color: #111827;
+    color: white;
+    text-align: center;
+    padding: 25px 20px;
+    margin-top: 0;
+}
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+.contact p a {
+    color: #168bf5;
+    text-decoration: none;
+    font-weight: bold;
+}
+.contact-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #168bf5, #0b70d1);
+    color: white !important;
+    padding: 14px 28px;
+    margin: 8px;
+    border-radius: 8px;
+    text-decoration: none !important;
+    font-weight: bold;
+    box-shadow: 0 8px 18px rgba(22, 139, 245, 0.25);
+    transition: 0.3s ease;
+}
+
+.contact-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 24px rgba(22, 139, 245, 0.35);
+}
+.contact p a:hover {
+    text-decoration: underline;
+}
+.why-us {
+    padding: 70px 60px;
+    background-color: white;
+    text-align: center;
+}
+
+.why-us h2 {
+    font-size: 36px;
+    color: #111827;
+    margin-bottom: 40px;
+}
+
+.why-container {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.why-card {
+    background-color: #f8fafc;
+    width: 280px;
+    padding: 30px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.why-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+}
+
+.why-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.why-card h3 {
+    color: #168bf5;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.why-card p {
+    color: #64748b;
+    line-height: 1.6;
+}
+@media (max-width: 768px) {
+
+    nav {
+        padding: 15px 20px;
+        text-align: center;
+    }
+
+    nav h2 {
+        display: block;
+        margin: 0 0 15px 0;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px 8px;
+        font-size: 14px;
+    }
+
+    .hero {
+        padding: 50px 25px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .about,
+    .services,
+    .contact {
+        padding: 50px 25px;
+    }
+
+    .service-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-card {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+   <nav class="navbar">
+    <div class="logo-box">
+        <div class="logo-icon">
+    <span>K</span>
+    <span>D</span>
+</div>
+
+        <div class="logo-text">
+            <h2>KRISHNA DESIGN</h2>
+            <span>BUILD • DESIGN • GROW</span>
+        </div>
+    </div>
+
+    <div class="nav-links">
+        <a href="#home">HOME</a>
+        <a href="#about">ABOUT</a>
+        <a href="#services">SERVICES</a>
+        <a href="#contact">CONTACT</a>
+    </div>
+</nav>
+   <div id="home" class="hero">
+    <div class="hero-content">
+
+        <div class="hero-text">
+            <h1>KRISHNA <span>DESIGN</span></h1>
+
+            <p>
+                Modern websites designed to help your
+                business grow online.
+            </p>
+
+            <a href="#contact" class="hero-btn">
+                GET STARTED →
+            </a>
+
+            <div class="hero-features">
+                <div>
+                    <strong>🚀 Fast & Modern</strong>
+                    <small>Websites</small>
+                </div>
+
+                <div>
+                    <strong>🛡️ Clean & Responsive</strong>
+                    <small>Designs</small>
+                </div>
+
+                <div>
+                    <strong>📊 Business</strong>
+                    <small>Growth</small>
+                </div>
+            </div>
+        </div>
+
+     <div class="hero-image">
+
+    <div class="hero-circle"></div>
+
+    <!-- PLANT -->
+    <div class="plant">
+        <div class="plant-leaves">
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+        </div>
+        <div class="plant-pot">
+            Good<br>
+            Design<br>
+            Better<br>
+            Business
+        </div>
+    </div>
+
+    <!-- LAPTOP -->
+    <div class="laptop">
+        <div class="laptop-screen">
+            <span>Ideas</span>
+            <span>into</span>
+            <strong>Websites</strong>
+        </div>
+        <div class="laptop-base"></div>
+    </div>
+
+    <!-- COFFEE MUG -->
+    <div class="coffee">
+        <div class="coffee-mug">
+            <span>KD</span>
+        </div>
+        <div class="coffee-handle"></div>
+    </div>
+
+</div>
+
+    </div>
+</div>
+<section id="about" class="about">
+
+    <h2>ABOUT US</h2>
+
+    <p>
+        Krishna Design is a modern web design service
+        focused on creating clean, professional and
+        user-friendly websites for businesses.
+    </p>
+
+
+</section>
+<section id="services" class="services">
+
+    <h2>OUR SERVICES</h2>
+
+    <div class="service-container">
+
+        <div class="service-card">
+            <h3>Website Design</h3>
+            <p>Modern and professional websites for your business.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>UI/UX Design</h3>
+            <p>Clean and user-friendly designs for websites and apps.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Website Development</h3>
+            <p>Fast and responsive websites built for your needs.</p>
+        </div>
+
+    </div>
+
+</section>
+<section id="portfolio" class="portfolio">
+
+    <h2>OUR WORK</h2>
+
+    <p class="portfolio-subtitle">
+        Some of our recent website projects.
+    </p>
+
+    <div class="portfolio-container">
+
+        <div class="portfolio-card">
+            <div class="portfolio-icon">🌐</div>
+            <h3>Business Website</h3>
+            <p>Modern website designed for a local business.</p>
+            <a href="#contact" class="portfolio-btn">VIEW PROJECT</a>
+        </div>
+
+        <div class="portfolio-card">
+            <div class="portfolio-icon">💻</div>
+            <h3>Professional Website</h3>
+            <p>Clean and responsive website for a professional brand.</p>
+            <a href="#contact" class="portfolio-btn">VIEW PROJECT</a>
+        </div>
+
+        <div class="portfolio-card">
+            <div class="portfolio-icon">📱</div>
+            <h3>Responsive Design</h3>
+            <p>Mobile-friendly design that works on every device.</p>
+            <a href="#contact" class="portfolio-btn">VIEW PROJECT</a>
+        </div>
+
+    </div>
+
+</section>
+<section class="why-us">
+
+    <h2>WHY CHOOSE US</h2>
+
+    <div class="why-container">
+
+        <div class="why-card">
+            <div class="why-icon">⚡</div>
+            <h3>Fast & Modern</h3>
+            <p>We create fast, modern and professional websites.</p>
+        </div>
+
+        <div class="why-card">
+            <div class="why-icon">📱</div>
+            <h3>Fully Responsive</h3>
+            <p>Your website works smoothly on mobile, tablet and desktop.</p>
+        </div>
+
+        <div class="why-card">
+            <div class="why-icon">🎯</div>
+            <h3>Business Focused</h3>
+            <p>Our designs are created to help your business grow online.</p>
+        </div>
+
+    </div>
+
+</section>
+<section id="contact" class="contact">
+
+    <h2>CONTACT US</h2>
+
+    <p>Have a project in mind? Let's work together.</p>
+
+ <p><a href="tel:9257919164" class="contact-btn">📞 CALL: 9257919164</a></p>
+
+<p>
+    <a href="mailto:er.krishnaagrawal09@gmail.com" class="contact-btn">
+        ✉ SEND EMAIL
+    </a>
+</p>
+</section>
+<footer>
+
+    <p>© 2026 Krishna Design. All Rights Reserved.</p>
+
+</footer>
+</body>
+</html>
